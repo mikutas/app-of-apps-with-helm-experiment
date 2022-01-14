@@ -4,6 +4,8 @@
 
 child1:
   enabled: false
+child2:
+  enabled: false
 
 replicaCount: 1
 
