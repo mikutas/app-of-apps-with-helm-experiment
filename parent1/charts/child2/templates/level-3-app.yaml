@@ -4,7 +4,7 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "10"
-  name: level-3-app-1
+  name: level-3-app-2
   namespace: argocd
 spec:
   destination:
