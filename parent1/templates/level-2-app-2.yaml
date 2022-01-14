@@ -2,8 +2,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "0"
-  name: level-2-app
+    argocd.argoproj.io/sync-wave: "5"
+  name: level-2-app-2
   namespace: argocd
 spec:
   destination:
@@ -13,9 +13,9 @@ spec:
   source:
     helm:
       values: |
-        child1:
+        child2:
           enabled: false
-    path: parent1/charts/child1
+    path: parent1/charts/child2
     repoURL: https://github.com/mikutas/app-of-apps-with-helm-experiment
     targetRevision: main
   syncPolicy:
