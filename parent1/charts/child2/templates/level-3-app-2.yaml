@@ -12,7 +12,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: chart-1
+    path: chart-2
     repoURL: https://github.com/mikutas/helm-charts-for-app-of-apps-experiment
     targetRevision: main
   syncPolicy:
