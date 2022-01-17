@@ -22,7 +22,7 @@ spec:
         nodeSelector:
           {{- toYaml . | nindent 10 }}
         {{- end }}
-        jobNameSuffix: {{ randAlpha 9 | lower }}
+        jobNameSuffix: {{ randAlpha 10 | lower }}
         command: {{ .Values.command }}
         argument: {{ .Values.argument }}
   syncPolicy:
