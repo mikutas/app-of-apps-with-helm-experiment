@@ -1,0 +1,4 @@
+releases:
+- chart: parent2
+  cleanupOnFail: false
+  name: parent2

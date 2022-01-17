@@ -11,5 +11,11 @@ print-passwd:
 argocd-uninstall:
 	kubectl delete namespace argocd
 
+parent1:
+	helmfile -f helmfile1.yaml apply
+
+parent2:
+	helmfile -f helmfile2.yaml apply
+
 clean:
 	kind delete cluster
