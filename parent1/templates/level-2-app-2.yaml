@@ -11,10 +11,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    helm:
-      values: |
-        child2:
-          enabled: false
     path: parent1/charts/child2
     repoURL: https://github.com/mikutas/app-of-apps-with-helm-experiment
     targetRevision: main
