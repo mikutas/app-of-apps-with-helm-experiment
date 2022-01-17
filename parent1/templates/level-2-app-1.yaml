@@ -14,6 +14,10 @@ spec:
     path: parent1/charts/child1
     repoURL: https://github.com/mikutas/app-of-apps-with-helm-experiment
     targetRevision: main
+    helm:
+      values: |
+        image:
+          tag: {{ .Values.image.tag }}
   syncPolicy:
     automated:
       allowEmpty: true

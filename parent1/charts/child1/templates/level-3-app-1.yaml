@@ -14,7 +14,8 @@ spec:
   source:
     helm:
       values: |
-        replicaCount: 2
+        image:
+          tag: {{ .Values.image.tag }}
     path: chart-1
     repoURL: https://github.com/mikutas/helm-charts-for-app-of-apps-experiment
     targetRevision: main
