@@ -16,6 +16,10 @@ spec:
       values: |
         image:
           tag: {{ .Values.image.tag }}
+        {{- with .Values.nodeSelector }}
+        nodeSelector:
+          {{- toYaml . | nindent 10 }}
+        {{- end }}
     path: chart-1
     repoURL: https://github.com/mikutas/helm-charts-for-app-of-apps-experiment
     targetRevision: main

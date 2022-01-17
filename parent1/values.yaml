@@ -13,7 +13,7 @@ image:
   repository: nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.23456"
+  tag: "1.25.1"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -80,7 +80,8 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-nodeSelector: {}
+nodeSelector:
+  foo: bar
 
 tolerations: []
 
