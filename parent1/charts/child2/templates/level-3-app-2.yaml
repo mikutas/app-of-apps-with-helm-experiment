@@ -19,10 +19,6 @@ spec:
       values: |
         image:
           tag: {{ .Values.image.tag }}
-        {{- with .Values.nodeSelector }}
-        nodeSelector:
-          {{- toYaml . | nindent 10 }}
-        {{- end }}
   syncPolicy:
     automated:
       allowEmpty: true
