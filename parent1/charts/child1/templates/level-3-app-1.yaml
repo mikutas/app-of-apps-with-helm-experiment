@@ -12,6 +12,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
+    helm:
+      values: |
+        replicaCount: 2
     path: chart-1
     repoURL: https://github.com/mikutas/helm-charts-for-app-of-apps-experiment
     targetRevision: main
