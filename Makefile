@@ -11,9 +11,11 @@ print-passwd:
 argocd-uninstall:
 	kubectl delete namespace argocd
 
+.PHONY: parent1
 parent1:
 	helmfile -f helmfile1.yaml apply
 
+.PHONY: parent2
 parent2:
 	helmfile -f helmfile2.yaml apply
 
