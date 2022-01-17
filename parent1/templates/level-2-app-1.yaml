@@ -22,6 +22,8 @@ spec:
         nodeSelector:
           {{- toYaml . | nindent 10 }}
         {{- end }}
+        command: {{ .Values.command }}
+        argument: {{ .Values.argument }}
   syncPolicy:
     automated:
       allowEmpty: true

@@ -86,3 +86,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+command: sleep
+argument: "120"

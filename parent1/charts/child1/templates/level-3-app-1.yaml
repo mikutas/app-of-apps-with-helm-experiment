@@ -12,6 +12,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
+    path: chart-1
+    repoURL: https://github.com/mikutas/helm-charts-for-app-of-apps-experiment
+    targetRevision: main
     helm:
       values: |
         image:
@@ -20,9 +23,8 @@ spec:
         nodeSelector:
           {{- toYaml . | nindent 10 }}
         {{- end }}
-    path: chart-1
-    repoURL: https://github.com/mikutas/helm-charts-for-app-of-apps-experiment
-    targetRevision: main
+        command: {{ .Values.command }}
+        argument: {{ .Values.argument }}
   syncPolicy:
     automated:
       allowEmpty: true
