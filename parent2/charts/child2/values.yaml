@@ -80,3 +80,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+global:
+  image:
+    tag: "1.21.5"
+  command: sleep
+  argument: "60"
