@@ -19,6 +19,9 @@ spec:
       values: |
         image:
           tag: {{ .Values.image.tag }}
+        jobNameSuffix: {{ .Values.jobNameSuffix }}
+        command: {{ .Values.command }}
+        argument: {{ .Values.argument }}
   syncPolicy:
     automated:
       allowEmpty: true
