@@ -14,6 +14,13 @@ spec:
     path: chart-1
     repoURL: https://github.com/mikutas/helm-charts-for-app-of-apps-experiment
     targetRevision: main
+    helm:
+      values: |
+        image:
+          tag: {{ .Values.global.image.tag }}
+        jobNameSuffix: {{ randAlpha 10 | lower }}
+        command: {{ .Values.global.command }}
+        argument: {{ .Values.global.argument }}
   syncPolicy:
     automated:
       allowEmpty: true

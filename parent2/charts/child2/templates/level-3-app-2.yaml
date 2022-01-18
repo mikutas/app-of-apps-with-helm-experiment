@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "10"
+    argocd.argoproj.io/sync-wave: "15"
   name: level-3-app-2
   namespace: argocd
 spec:
@@ -14,6 +14,13 @@ spec:
     path: chart-2
     repoURL: https://github.com/mikutas/helm-charts-for-app-of-apps-experiment
     targetRevision: main
+    helm:
+      values: |
+        image:
+          tag: {{ .Values.global.image.tag }}
+        jobNameSuffix: {{ randAlpha 10 | lower }}
+        command: {{ .Values.global.command }}
+        argument: {{ .Values.global.argument }}
   syncPolicy:
     automated:
       allowEmpty: true
