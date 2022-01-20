@@ -87,5 +87,5 @@ tolerations: []
 
 affinity: {}
 
-command: exit
-argument: "1"
+command: sleep
+argument: "121"
