@@ -9,4 +9,4 @@ spec:
       - name: argocd-application-controller
         env:
         - name: ARGOCD_SYNC_WAVE_DELAY
-          value: "10"
+          value: "5"
